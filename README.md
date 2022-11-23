@@ -1,5 +1,5 @@
 # to-do-list
-![to-do-listr](https://github.com/justynaboesche/Currency-conventer/blob/dbe0dc8f01a9d79b833c15eee529908ac729c0be/images/Currency%20Conventer.png)
+![to-do-listr](https://raw.githubusercontent.com/justynaboesche/to-do-list/main/images/To-do-list2.png)
 ## Demo
 [See my to-do-list](https://justynaboesche.github.io/Currency-conventer/)
 ## Description
