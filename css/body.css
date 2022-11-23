@@ -1,0 +1,11 @@
+.body {
+    background: rgb(238, 238, 233);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    max-width: 700px;
+     
+}
+
+.body__header {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,23 @@
+.form {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 15px;
+}
+
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form__field {
+    padding: 10px;
+}
+
+.form__button {
+    border: 1px solid rgb(180, 169, 169);
+    background-color: teal;
+    color: white;
+    padding: 10px;
+}
