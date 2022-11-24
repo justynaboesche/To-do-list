@@ -18,71 +18,74 @@
         render();
     };
 
-    const bindEvents = () => {
+    const bindToggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
-        toggleDoneButtons.forEach((toggleDoneButton, index) => {
+        toggleDoneButtons.forEach((toggleDoneButton, taskIndex) => {
             toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(index);
+                toggleTaskDone(taskIndex);
             });
         });
+    };
 
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
-        removeButtons.forEach((removeButton, index) => {
+        removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEventListener("click", () => {
-                removeTask(index);
+                removeTask(taskIndex);
             });
         });
-    }
+    };
 
     const render = () => {
-        let listOfTasksContentHTML = "";
+        let listOfTasksHTMLContent = "";
 
         for (const task of tasks) {
-            listOfTasksContentHTML += `
-    <li
-    class="tasks__item js-task">
-    <button class="tasks__button tasks__button--done js-done">
-    ${task.done ? "✓" : ""}
-    </button>
-    <span class="tasks__content${task.done ? " tasks__content--done" : ""}">
-    ${task.content}
-    </span> 
-    <button class="tasks__button tasks__button--remove js-remove">
-    🗑
-    </button>
-      </li>
-    `;
-        }
+            listOfTasksHTMLContent += `
+                <li
+                  class="tasks__item js-task"
+                >
+                  <button class="tasks__button tasks__button--done js-done">
+                    ${task.done ? "✓" : ""}
+                  </button>
+                  <span class="tasks__content${task.done ? " tasks__content--done" : ""}">
+                    ${task.content}
+                  </span> 
+                  <button class="tasks__button tasks__button--remove js-remove">
+                    🗑
+                  </button>
+                </li>
+              `;
+            }
 
-        document.querySelector(".js-tasks").innerHTML = listOfTasksContentHTML;
+            document.querySelector(".js-tasks").innerHTML = listOfTasksHTMLContent;
 
-        bindEvents();
-    };
+            bindToggleDoneEvents();
+            bindRemoveEvents();
+        };
 
-    const onformdSubmit = (event) => {
-        event.preventDefault();
+        const onformdSubmit = (event) => {
+            event.preventDefault();
 
-        const newTaskElement = document.querySelector(".js-newTask")
-        const newTaskContent = newTaskElement.value.trim();
+            const newTaskElement = document.querySelector(".js-newTask")
+            const newTaskContent = newTaskElement.value.trim();
 
-        if (newTaskContent !== "") {
-            addNewTask(newTaskContent);
-            newTaskElement.value = "";
-        }
+            if (newTaskContent !== "") {
+                addNewTask(newTaskContent);
+                newTaskElement.value = "";
+            }
 
-        newTaskElement.focus();
-    };
+            newTaskElement.focus();
+        };
 
-    const init = () => {
-        render();
+        const init = () => {
+            render();
 
-        const form = document.querySelector(".js-form");
+            const form = document.querySelector(".js-form");
+            form.addEventListener("submit", onformdSubmit);
+        };
 
-        form.addEventListener("submit", onformdSubmit);
-    };
-
-    init();
-}
+        init();
+    }
 
