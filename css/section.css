@@ -1,17 +1,16 @@
 .section {
-    background: white;
+   background: white;
    border: 1px solid rgb(196, 192, 192);
    margin-bottom: 10px;
- 
 }
 
 .section__header {
-    margin: 0px;
-    padding: 20px;
-    border-bottom: 1px solid rgb(180, 169, 169);
+	margin: 0;
+    font-size: 20px;
+	padding: 20px;
+	border-bottom: 1px solid rgb(180, 169, 169);
 }
 
 .section__list {
-    padding: 15px;
-    padding-bottom: 5px;
+	padding: 20px;
 }
