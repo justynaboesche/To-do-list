@@ -12,12 +12,9 @@ At the beginning you need to enter your first task. To add the task to the list 
 ![Homepage GIF](images/CurrencyConventer.gif)
 ## Technologies used in the project
 To create the application I have used:
-- HTML
-- CSS
-- Normalize
-- Flexbox
+- HTML 5
+- CSS Grid
+- Normalize.css
 - BEM convention
-- JavaScript
-- ES6+ features
-- GIT
-- Markdown
+- JavaScript ES6+
+
