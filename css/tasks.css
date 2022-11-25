@@ -18,6 +18,7 @@
     height: 30px;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 .tasks__button--done {
