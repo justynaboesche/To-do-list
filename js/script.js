@@ -64,7 +64,7 @@
         });
     };
 
-    const render = () => {
+    const renderTasks = () => {
         let listOfTasksHTMLContent = "";
 
         for (const task of tasks) {
@@ -89,7 +89,6 @@
     };
 
     const renderButtons = () => {
-
         let buttonsHTMLContent = "";
 
         if (tasks.length !== 0) {
