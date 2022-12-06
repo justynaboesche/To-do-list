@@ -4,16 +4,20 @@
    margin-bottom: 10px;
 }
 
-.section__header{
+.section__header {
+    border-bottom: 1px solid rgb(180, 169, 169);
+}
+
+.section__header--grid {
     display: grid;
     grid-template-columns: 1fr auto auto;
-    padding: 10px;
     border-bottom: 1px solid rgb(180, 169, 169);
 }
 
 @media (max-width: 767px) {
-    .section__header {
+    .section__header--grid {
         grid-template-columns: 1fr;
+        padding-bottom: 20px;
     }
 }
 
@@ -29,6 +33,12 @@
     background-color: transparent;
     cursor: pointer;
     padding: 20px; 
+}
+
+@media (max-width: 767px) {
+    .section__header--button {
+        padding: 10px;
+    }
 }
 
 .section__header--button:hover {
@@ -48,7 +58,7 @@
     .section__header--buttons {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center;  
     }
 }
 
