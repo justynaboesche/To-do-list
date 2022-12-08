@@ -17,7 +17,7 @@
             ...tasks.slice(taskIndex + 1),
         ];
         // alternative code:
-        // tasks = tasks.map(({ done }, currentIndex) => currentIndex === taskIndex ? !done : done);
+        // tasks = tasks.map((task, currentIndex) => currentIndex === taskIndex ? {...task, done: !task.done} : task);
         render();
     };
 
