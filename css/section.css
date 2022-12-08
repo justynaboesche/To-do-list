@@ -10,8 +10,9 @@
 
 .section__header--grid {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto;
     border-bottom: 1px solid rgb(180, 169, 169);
+    align-items: center;
 }
 
 @media (max-width: 767px) {
@@ -33,6 +34,7 @@
     background-color: transparent;
     cursor: pointer;
     padding: 20px; 
+    transition: color 1s;
 }
 
 @media (max-width: 767px) {
@@ -43,7 +45,6 @@
 
 .section__header--button:hover {
     color: hsl(180, 100%, 30%);
-    transition: 1s;
  }
 
 .section__header--button:active {

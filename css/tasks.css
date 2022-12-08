@@ -24,7 +24,7 @@
     color: white;
     cursor: pointer;
     padding: 0px;  
-    transition: 1s; 
+    transition: background 1s; 
 }
 
 .tasks__button--done {
