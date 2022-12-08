@@ -117,8 +117,6 @@
                     Ukończ wszystkie
             </button>
             `;
-        } else if (tasks.length === 0) {
-            buttonsHTMLContent = ``;
         }
 
         document.querySelector(".js-buttons").innerHTML = buttonsHTMLContent;
