@@ -100,10 +100,14 @@
     };
 
     const renderButtons = () => {
-        let buttonsHTMLContent = "";
+        const buttonsElement = document.querySelector(".js-buttons")
 
-        if (tasks.length !== 0) {
-            buttonsHTMLContent = `
+        if (tasks.length === 0) {
+            buttonsElement.innerHTML = "";
+            return;
+        }
+
+        buttonsElement.innerHTML = `
             <button 
                 class="section__header--button js-hideShowDoneTask"
                 ${tasks.some(({ done }) => done) ? "" : "disabled"}>
@@ -114,9 +118,6 @@
                     Ukończ wszystkie
             </button>
             `;
-        }
-
-        document.querySelector(".js-buttons").innerHTML = buttonsHTMLContent;
     };
 
     const render = () => {
